@@ -15,17 +15,15 @@ int main() {
             std::cout << (rnd() & 1) + 1 << ' ' << (int) rnd() << '\n';
             sz++;
         } else {
-            int t = (rnd() & 7) + 1;
+            int t = (rnd() % 5) + 1;
             std::cout << t << ' ';
             if (t < 3) {
                 std::cout << (int) rnd() << '\n';
                 sz++;
-            } else if (t == 7) {
+            } else if (t == 5) {
                 std::cout << std::uniform_int_distribution(1, sz)(rnd) << '\n';
             } else {
-                if (t < 5) {
-                    sz--;
-                }
+                sz--;
                 std::cout << '\n';
             }
         }
